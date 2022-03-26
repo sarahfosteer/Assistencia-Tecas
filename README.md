@@ -1,1 +1,1 @@
-Sistema de gestão de loja de celulares V1.0 # Loja-Theca
+<h1 align="center"> Sistema de Gestão da Loja Tecas</h1>
