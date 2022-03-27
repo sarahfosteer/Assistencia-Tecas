@@ -1,11 +1,12 @@
 
+![_tecas-capa ](https://user-images.githubusercontent.com/102382880/160295790-a7016fb4-bc5d-48da-beb5-36451553d958.jpg)
 
-![image (1) (1)](https://user-images.githubusercontent.com/102382880/160290398-3c13aa28-7728-49f8-ab6f-67c5933fdc7c.png)
+
 
 <h1 align="center"> Sistema de Gestão da Loja Tecas</h1>
 
-Tabela de conteúdos
-=================
+
+
 <p align="center">
  <a href="#sobre">Sobre</a> •
  <a href="#status">Status</a> • 
@@ -13,8 +14,10 @@ Tabela de conteúdos
  <a href="#tec">Tecnologias Usadas</a> • 
  <a href="#cont">Como contribuir</a> • 
  <a href="#autor">Autor</a> • 
- <a href="#licenc-a">Licença</a> • 
+ <a href="#licenc-a">Licença</a> 
 </p>
+
+#
 
 <div id=sobre>
   
