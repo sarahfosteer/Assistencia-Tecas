@@ -3,7 +3,7 @@
 
 
 
-<h1 align="center"> Sistema de Gestão da Loja Tecas</h1>
+<h1 align="center"> Sistema de Gestão da Assistencia/Loja Tecas</h1>
 
 
 
