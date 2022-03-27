@@ -81,8 +81,6 @@ Todos os tipos de contribuições são muito bem-vindas e apreciadas!
 - ⭐️ Dê uma estrela para o projeto
 - 🐛 Encontre e relate problemas
 - 📥 Envie email para ajudar a resolver problemas ou adicionar recursos
-
-E certifique-se de ler o [Guia de Contribuição](/CONTRIBUTION.md) antes de fazer um pull request.
 </div>
 
 <div id=autor>
