@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="impressao_OS" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8104e0eb-c9be-4f33-bb13-2912a118aad1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select
+os.os as OS,date_format(os.dataOS,'%d/%m/%Y - %H:%i') as data,
+os.tipo as tipo_OS,os.equipamento,os.defeito,os.valor,
+clientes.nome_cliente as cliente,clientes.telefone_cliente as fone
+from os inner join clientes on os.id_cliente = clientes.id_cliente
+where os=1;]]>
+	</queryString>
+	<field name="OS" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data" class="java.lang.String"/>
+	<field name="tipo_OS" class="java.lang.String"/>
+	<field name="equipamento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="defeito" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valor" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cliente" class="java.lang.String"/>
+	<field name="fone" class="java.lang.String"/>
+	<group name="OS">
+		<groupExpression><![CDATA[$F{OS}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="207" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="-4" width="555" height="211" uuid="40e259c9-7362-4f53-9517-f22664ea9935"/>
+				<imageExpression><![CDATA["C:\\Users\\Sarah Foster\\Documents\\NetBeansProjects\\Loja1\\src\\img\\tecas-logo.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="223" y="148" width="154" height="20" forecolor="#333333" uuid="f139b0cf-0267-41e6-90bb-3064c42395ba"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[WhatsApp (19) 98139 4411]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="168" width="158" height="20" forecolor="#333333" uuid="8ad24153-2bdf-481b-bb4b-178e2467e1f6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Rua Exemplo - Jardim Exemplo]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="56" y="0" width="143" height="20" forecolor="#58B7DC" uuid="a2c3d9c9-9c0c-4446-92c4-cdedde669c37"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ordem de Serviço]]></text>
+			</staticText>
+			<frame>
+				<reportElement mode="Opaque" x="1" y="0" width="43" height="20" forecolor="#58B7DC" backcolor="#58B7DC" uuid="e27f103b-faf1-4035-a233-acc4e90e0475"/>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="41" width="40" height="20" uuid="eb4c0869-2b28-4c78-b02e-21cc87f9be41"/>
+				<text><![CDATA[OS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="41" width="100" height="20" uuid="e4f7198b-4622-4776-9618-1f27a5a69abb"/>
+				<text><![CDATA[data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="41" width="100" height="20" uuid="9efc21c5-d874-41ac-b63d-9b9f30c97f1b"/>
+				<text><![CDATA[tipo_OS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="41" width="100" height="20" uuid="748552fa-0581-42a3-9d7b-afef01feea63"/>
+				<text><![CDATA[equipamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="41" width="100" height="20" uuid="74013eb1-49b3-4ed1-803c-7597a9e6e4af"/>
+				<text><![CDATA[valor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="41" width="115" height="20" uuid="4df7228b-8bd8-4739-b842-10473a50a609"/>
+				<text><![CDATA[cliente]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="0" width="39" height="20" uuid="59c63f09-5e90-49c3-a9e8-0fcf8c442e40"/>
+				<textFieldExpression><![CDATA[$F{OS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="0" width="100" height="20" uuid="e78e67d5-2506-4919-8f7f-124ab59f2194"/>
+				<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="0" width="100" height="20" uuid="36e12af2-ec0b-44b7-9a2a-9ff7cddab914"/>
+				<textFieldExpression><![CDATA[$F{tipo_OS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="0" width="100" height="20" uuid="80ba2a8a-9b33-46d6-aa6b-935d45892bc8"/>
+				<textFieldExpression><![CDATA[$F{equipamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="100" height="20" uuid="941ad8a0-ed97-45ca-b3b7-fd84a87f4122"/>
+				<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="0" width="115" height="20" uuid="6dbc899d-d7b6-4204-8b4a-5e8c1e12b281"/>
+				<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="86" y="25" width="389" height="20" forecolor="#333333" uuid="ac2daab8-e210-4fd1-a7d5-f8606bf27a2d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Assinatura do cliente:_____________________________________]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="54" forecolor="#009999" backcolor="#58B7DC" uuid="215e07eb-9167-4264-8a26-f77fb0287545"/>
+				<textField>
+					<reportElement x="432" y="19" width="80" height="20" forecolor="#FFFFFF" uuid="a913e2f5-9f00-4d15-bdfb-c79ef85f3203"/>
+					<textElement textAlignment="Right">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement x="515" y="19" width="40" height="20" forecolor="#FFFFFF" uuid="1c9b0c99-0445-47c9-8ed4-f642c88d2576"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+					<reportElement x="13" y="19" width="138" height="20" forecolor="#FFFFFF" uuid="ed152acd-948d-4498-8296-8aa395b356aa"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
