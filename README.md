@@ -15,6 +15,7 @@ Este projeto visa facilitar o dia a dia da Assistência técnica Tecas, facilita
 + Historico de Clientes
 + Emissáo/busca/alteração de OS
 + Impressão de relatório de clientes
++ Impressão de relatório de OS
 + Impressão da OS
 
 ..para fotos [CLIQUE AQUI](/FOTOS.md).
