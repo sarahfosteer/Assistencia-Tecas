@@ -107,5 +107,7 @@ Todos os tipos de contribuições são muito bem-vindas e apreciadas!
 #
  
  **LICENSE**
+ 
+ 
  [![GitHub license](https://img.shields.io/github/license/sarahfosteer/Assistencia-Tecas)](https://github.com/sarahfosteer/Assistencia-Tecas/blob/main/LICENSE)
  
