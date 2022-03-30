@@ -10,9 +10,9 @@ Este projeto visa facilitar o dia a dia da Assistência técnica Tecas, facilita
 
 + Acesso ao sistema através de LOGIN e SENHA
 + Tela Principal que dá acesso rapidamente as outras funções
-+ Casdastro/busca/exlusão/alteração de USUÁRIOS/FUNCIONARIOS
-+ Casdastro/busca/alteração de NOVOS CLIENTES. (Assim que preenchido o CEP, ele busca e completa os campos Rua e Bairro automaticamente)
-+ Historico de Clientes
++ Cadastro/busca/exclusão/alteração de USUÁRIOS/FUNCIONÁRIOS
++ Cadastro/busca/alteração de NOVOS CLIENTES. (Assim que preenchido o CEP, ele busca e completa os campos Rua e Bairro automaticamente)
++ Histórico de Clientes
 + Emissáo/busca/alteração de OS
 + Impressão de relatório de clientes
 + Impressão de relatório de OS
